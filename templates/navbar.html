@@ -6,6 +6,7 @@
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"> </script>
+	<script type="text/javascript" src="{{ url_for('static', filename = 'navbar.js') }}"></script>
 
 	<style>
 		html{
@@ -26,10 +27,10 @@
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarText">
 	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item active" id ="list_nav">
+	      <li class="nav-item active" id ="home_nav">
 	        <a class="nav-link text-nowrap" href="http://127.0.0.1:5000/home">Generator</a>
 	      </li>
-	      <li class="nav-item" id="quiz_nav">
+	      <li class="nav-item" id="history_nav">
 	        <a class="nav-link text-nowrap" href="http://127.0.0.1:5000/history">History</a>
 	      </li>
 	    </ul>

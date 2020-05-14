@@ -21,7 +21,11 @@ var get_clauses = function(){
                 $("#C-clause").text(C_clause.value + ".") 
                 $("#C-clause").removeClass("hide-item")
             }, 5000);
+            setTimeout(() => {
+                $("#generate-btn").prop("disabled", false)
+            }, 7500);
 
+            
         },
         error: function(request, status, error){
             console.log("Error");
@@ -33,6 +37,7 @@ var get_clauses = function(){
 }
 
 $(document).on("click", "#generate-btn", function(){
+    $("#generate-btn").prop("disabled", true)
     $("#A-clause").text()
     $("#A-clause").addClass("hide-item")
     $("#B-clause").text()
