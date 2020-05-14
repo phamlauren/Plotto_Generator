@@ -2,7 +2,6 @@ from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
 import random
-from random import shuffle
 app = Flask(__name__)
 
 Clauses_A = [
@@ -383,12 +382,12 @@ Clauses_C = [
     },
 ]
 
-@app.route('/')
+@app.route('/home')
 def home_page():
-    return render("home_page.html")
+    return render_template("home.html", Clauses_A=Clauses_A, Clauses_B=Clauses_B, Clauses_C=Clauses_C)
 
-@app.route('/random')
-def home_page():
+@app.route('/random', methods=['GET', 'POST'])
+def random_generate():
     random_A = random.randint(1,15)
     random_B = random.randint(1,62)
     random_C = random.randint(1,15)
