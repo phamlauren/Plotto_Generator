@@ -3,7 +3,7 @@
 <head>
 	{% extends "navbar.html" %}
 	{% block head %}
-	<link rel="stylesheet" href="{{ url_for('static', filename = 'fade-in.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename = 'fade.css') }}">
   <script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
 
   	 <style>
@@ -58,9 +58,9 @@
 	{% block content %}
 	<button class="btn btn-primary" id="generate-btn">Generate a plot</button>
 	<div id="clauses-container">
-		<div id="A-clause" class="fade-in hide-item"></div>
-		<div id="B-clause" class="fade-in hide-item"></div>
-		<div id="C-clause" class="fade-in hide-item"></div>
+		<div id="A-box"><div id="A-clause"></div></div>
+		<div id="B-box"><div id="B-clause"></div></div>
+		<div id="C-box"><div id="C-clause"></div></div>
 	</div>
 	{% endblock %}
 </body>

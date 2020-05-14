@@ -10,20 +10,22 @@ var get_clauses = function(){
             var B_clause = result["B_clause"]
             var C_clause = result["C_clause"]
 
-
             $("#A-clause").text(A_clause.value + ", ")
-            $("#A-clause").removeClass("hide-item")
-            setTimeout(() => { 
-                $("#B-clause").text(B_clause.value + ", ") 
-                $("#B-clause").removeClass("hide-item")
-            }, 2500);
+            $("#B-clause").addClass("fade-out")
             setTimeout(() => {
+                $("#B-clause").removeClass("fade-out")
+                $("#B-clause").addClass("fade-in")
+                $("#B-clause").text(B_clause.value + ", ") 
+                $("#C-clause").addClass("fade-out")
+            }, 3000);
+            setTimeout(() => {
+                $("#C-clause").removeClass("fade-out")
+                $("#C-clause").addClass("fade-in")
                 $("#C-clause").text(C_clause.value + ".") 
-                $("#C-clause").removeClass("hide-item")
-            }, 5000);
+            }, 6000);
             setTimeout(() => {
                 $("#generate-btn").prop("disabled", false)
-            }, 7500);
+            }, 9000);
 
             
         },
@@ -38,12 +40,18 @@ var get_clauses = function(){
 
 $(document).on("click", "#generate-btn", function(){
     $("#generate-btn").prop("disabled", true)
-    $("#A-clause").text()
-    $("#A-clause").addClass("hide-item")
-    $("#B-clause").text()
-    $("#B-clause").addClass("hide-item")
-    $("#C-clause").text()
-    $("#C-clause").addClass("hide-item")
-    get_clauses()
+    if($("#A-clause").text() == ""){
+        $("#A-clause").addClass("fade-in")
+        get_clauses()
+    }
+    else{    
+        $("#A-clause").removeClass("fade-in")
+        $("#A-clause").addClass("fade-out")
+        setTimeout(() => {
+            $("#A-clause").removeClass("fade-out")
+            $("#A-clause").addClass("fade-in")
+            get_clauses()
+        }, 3000);
+    }
 
 })
