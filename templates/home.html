@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+	{% extends "navbar.html" %}
+	{% block head %}
 	<link rel="stylesheet" href="{{ url_for('static', filename = 'fade-in.css') }}">
-  	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   	<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
 
   	 <style>
   	 	body{
-  	 		text-align: center;
+  	 		color: white;
+  	 		background-color: black;
+  	 		font-family: Baskerville;
   	 		font-size: 24px;
   	 	}
 
 		#generate-btn {
-			margin: 20px auto;
+			margin: 100px auto;
 			display: block;
+  	 		background-color: white;
+  	 		color: black;
+  	 		border: 1px solid gray;
+  	 		font-size: 24px;
 		}
 
-  	 	#A, #B, #C {
-  	 		font-size: 28px;
-  	 		text-align: left;
-  	 		display: block;
+  	 	#generate-btn:hover {
+  	 		background-color: gray;
+  	 		border: 1px solid gray;
+  	 	}
+
+  	 	#generate-btn:active {
+  	 		background-color: white;
+  	 		color: black;
+  	 		border: 1px solid gray;
+  	 	}
+
+  	 	#clauses-container {
+  	 		margin-left: 100px;
   	 	}
 
   	 	.hide-item {
@@ -37,10 +50,11 @@
   	 	var Clauses_C = {{Clauses_C|tojson}}
   	 </script>
 
+  	 {% endblock %}
+
 </head>
 
 <body>
-	{% extends "navbar.html" %}
 	{% block content %}
 	<button class="btn btn-primary" id="generate-btn">Generate a plot</button>
 	<div id="clauses-container">
