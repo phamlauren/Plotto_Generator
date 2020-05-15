@@ -7,7 +7,76 @@
    	body{
    		font-family: Baskerville;
    		font-size: 24px;
+      background-color: black;
+      color: white;
    	}
+
+    .container {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+    } 
+
+    .line-spacing {
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .row {
+      margin-top: 75px;
+    }
+
+    .italics {
+      font-style: italic;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .justify {
+      text-align: justify;
+    }
+
+    .small-text {
+      font-size: 18px;
+    }
+
+    .large-text {
+      font-size: 56px;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    #flip-quote{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        width: 5%;
+        position: absolute;
+        margin-left: -35px;
+    }
+
+    #quote {
+      width: 5%;
+      position: absolute;
+      margin-left: 130px;
+      margin-top: -35px;
+    }
+
+    sup{
+      color: #333333;
+    }
+
   </style>
   {% endblock %}
 
@@ -15,8 +84,47 @@
 
 <body>
 	{% block content %}
-	<div id="container">
-
+	<div class="container">
+    <div class="row">
+      <div class="col-md-12 left">“I sent from England for an American book,” Alfred Hitchcock recalls in a 1970 interview, “called <span class="italics">Plotto</span>.”<sup>1</sup></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 large-text"><span class="italics">Plotto:</span> The Master Book of All Plots</div>
+    </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename = 'writers-notice.png') }}" alt="Writers Notice advertizing Plotto found in a copy of J. George Frederick’s The Psychology of Writing Success (1933) possessed by the University of Michigan">
+          <p class="small-text">Found in a copy of J. George Frederick’s <span class="italics">The Psychology of Writing Success</span> (1933) at the University of Michigan<sup>2</sup></p>
+        </div>
+        <div class="col-md-8 justify"><br />A novel plot suggestion tool created by William Wallace Cook for creative fiction writers of decades past its publication in 1928 - fondly considered "a textbook to which the lovable Mr. Cook devoted much care in his ardent desire to help others" by pulp editor and publisher H. Brainerd Hersey in 1937.<sup>3</sup></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 right" style="padding-right: 75px;">How it works
+          <br/>
+          <br/>
+          <div class="large-text">Clause A +<br/>Clause B +<br/>Clause C<span style="color: black;"> +</span></div>
+        </div>
+        <div class="col-md-6 justify">
+          <div class="line-spacing" style="margin-bottom: 25px">"Masterplots with Interchangeable Clauses"<sup>4</sup></div>
+          <img src="https://media.giphy.com/media/2A4A9kI7YFXC789O7A/giphy.gif" id="flip-quote" alt="Opening quotation mark gif">
+          <div class="line-spacing">A Plotto Masterplot consists of three clauses: An "A" Clause, a "B" Clause and a "C" Clause.</div>
+          <div class="line-spacing">The A Clause is the Protagonist Clause.</div>
+          <div class="line-spacing">The B Clause originates and carries on the action. The C Clause carries on and terminates the action.</div>
+          <div class="line-spacing">Any A Clause may be used in conjunction with any B Clause and with any C Clause. For the purpose of bringing all the B Clauses in juxtaposition with all the A and C Clauses, it is merely necessary to turn the narrow page.</div>
+          <img src="https://media.giphy.com/media/2A4A9kI7YFXC789O7A/giphy.gif" id="quote" alt="Closing quotation mark gif">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 justify small-text">Extraordinarily prolific dime novelist and pulp magazine writer who occassionally wrote under the pen-name John Milton Edwards, including <span class="italics">The Fiction Factory: Being the Experience of a Writer Who, for Twenty-Two Years, Has Kept a Story-Mill Grinding Successfully</span> (1912) in which he describes his method to writing 66,000 words per week, an exceptional pace which he sustained for some years.</div>
+        <div class="col-md-6 left" style="padding-left: 75px;">William Wallace Cook (1867-1933)</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 left">
+          “The Conflicts all come from the vast storehouse of Human Nature. They are there, millions upon millions of them, waiting for the imagination to select them and group them in an original combination.”
+          <p>The Plotto's forefather: <span class="italics">Ars brevis</span> (1308)</p>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
 	</div>
 	{% endblock %}
 </body>

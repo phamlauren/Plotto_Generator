@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% extends "navbar.html" %}
+	{% block head %}
+  <style>
+   	body{
+   		font-family: Baskerville;
+   		font-size: 24px;
+      background-color: black;
+      color: white;
+   	}
+
+    .container {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+
+    } 
+
+    .italics {
+      font-style: italic;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    .small-text {
+      font-size: 18px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+  </style>
+  {% endblock %}
+
+</head>
+
+<body>
+	{% block content %}
+	<div class="container">
+    <div class="row">
+      <div class="col-md-12 left" style="margin-bottom: 50px; font-size: 40px;">About this project</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" style="text-align: justify;">This project was created by Lauren Pham for CLEN-GU4728: Literature in the Age of Artificial Intelligence taught by Professor Dennis Y. Tenen in the Department of English and Comparative Literature at Columbia University.<br/>Lauren is a BA candidate in the Department of Computer Science at Columbia University, Class of 2021.</div>
+    </div>
+	</div>
+	{% endblock %}
+</body>
+</html>
