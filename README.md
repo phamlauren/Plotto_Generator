@@ -2,7 +2,7 @@
 
 This project is for CLEN-GU4728: Literature in the Age of Artificial Intelligence taught by Professor Dennis Y. Tenen in the Department of English and Comparative Literature at Columbia University.
 
-The Flask app is hosted on PythonAnywhere - [Click here!](http://laurenpham.pythonanywhere.com/home).
+The Flask app is hosted on PythonAnywhere - [Click here!](http://laurenpham.pythonanywhere.com/home)
 
 If you really want to, you could also run the app on your local machine, download the repository. On the command line in the Plotto_Generator directory, execute the commands:
 
