@@ -46,6 +46,10 @@
       font-size: 18px;
     }
 
+    .medium-text {
+      font-size: 42px;
+    }
+
     .large-text {
       font-size: 56px;
     }
@@ -58,22 +62,39 @@
       margin-top: 10px;
     }
 
-    #flip-quote{
+    #quote1{
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
-        width: 5%;
+        width: 2%;
         position: absolute;
-        margin-left: -35px;
+        margin-top: -2px;
+        margin-left: -10px;
     }
 
-    #quote {
-      width: 5%;
+    #quote2 {
+      width: 2%;
       position: absolute;
-      margin-left: 130px;
-      margin-top: -35px;
+      margin-left: 425px;
+      margin-top: -2px;
     }
 
-    sup{
+    #quote3{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        width: 2%;
+        position: absolute;
+        margin-top: -2px;
+        margin-left: 882px;
+    }
+
+    #quote4 {
+      width: 2%;
+      position: absolute;
+      margin-top: -2px;
+      margin-left: 1020px;
+    }
+
+    sup, .citations{
       color: #333333;
     }
 
@@ -86,7 +107,11 @@
 	{% block content %}
 	<div class="container">
     <div class="row">
-      <div class="col-md-12 left">“I sent from England for an American book,” Alfred Hitchcock recalls in a 1970 interview, “called <span class="italics">Plotto</span>.”<sup>1</sup></div>
+      <img src="https://media.giphy.com/media/2A4A9kI7YFXC789O7A/giphy.gif" id="quote1" alt="Opening quotation mark gif">
+      <div class="col-md-12 left">I sent from England for an American book,” &nbspAlfred Hitchcock recalls in a 1970 interview,  “&nbsp&nbspcalled <span class="italics">Plotto</span>.”<sup>1</sup></div>
+      <img src="https://media.giphy.com/media/2A4A9kI7YFXC789O7A/giphy.gif" id="quote2" alt="Closing quotation mark gif">
+      <img src="https://media.giphy.com/media/2A4A9kI7YFXC789O7A/giphy.gif" id="quote3" alt="Opening quotation mark gif">
+      <img src="https://media.giphy.com/media/2A4A9kI7YFXC789O7A/giphy.gif" id="quote4" alt="Opening quotation mark gif">
     </div>
     <div class="row">
       <div class="col-md-12 large-text"><span class="italics">Plotto:</span> The Master Book of All Plots</div>
@@ -96,7 +121,7 @@
           <img src="{{ url_for('static', filename = 'writers-notice.png') }}" alt="Writers Notice advertizing Plotto found in a copy of J. George Frederick’s The Psychology of Writing Success (1933) possessed by the University of Michigan">
           <p class="small-text">Found in a copy of J. George Frederick’s <span class="italics">The Psychology of Writing Success</span> (1933) at the University of Michigan<sup>2</sup></p>
         </div>
-        <div class="col-md-8 justify"><br />A novel plot suggestion tool created by William Wallace Cook for creative fiction writers of decades past its publication in 1928 - fondly considered "a textbook to which the lovable Mr. Cook devoted much care in his ardent desire to help others" by pulp editor and publisher H. Brainerd Hersey in 1937.<sup>3</sup></div>
+        <div class="col-md-8 justify"><br />A novel plot suggestion tool created by William Wallace Cook for creative fiction writers for decades following its publication in 1928 - fondly considered "a textbook to which the lovable Mr. Cook devoted much care in his ardent desire to help others" by pulp editor and publisher H. Brainerd Hersey in 1937.<sup>3</sup></div>
       </div>
       <div class="row">
         <div class="col-md-6 right" style="padding-right: 75px;">How it works
@@ -106,27 +131,46 @@
         </div>
         <div class="col-md-6 justify">
           <div class="line-spacing" style="margin-bottom: 25px">"Masterplots with Interchangeable Clauses"<sup>4</sup></div>
-          <img src="https://media.giphy.com/media/2A4A9kI7YFXC789O7A/giphy.gif" id="flip-quote" alt="Opening quotation mark gif">
-          <div class="line-spacing">A Plotto Masterplot consists of three clauses: An "A" Clause, a "B" Clause and a "C" Clause.</div>
-          <div class="line-spacing">The A Clause is the Protagonist Clause.</div>
-          <div class="line-spacing">The B Clause originates and carries on the action. The C Clause carries on and terminates the action.</div>
-          <div class="line-spacing">Any A Clause may be used in conjunction with any B Clause and with any C Clause. For the purpose of bringing all the B Clauses in juxtaposition with all the A and C Clauses, it is merely necessary to turn the narrow page.</div>
-          <img src="https://media.giphy.com/media/2A4A9kI7YFXC789O7A/giphy.gif" id="quote" alt="Closing quotation mark gif">
+          <img src="{{ url_for('static', filename = 'masterplot_instructions.png') }}" alt="Screenshot of page 11, Plotto book">
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 justify">Disclaimer: <span class="small-text">The Plotto Masterplot generator implemented here is a simplified version which follows only the instruction Clause A + Clause B + Clause C, where there are 15 possible Clause As, 62 possible Clause Bs, and 15 possible Clause Cs. <span class="italics">Plotto</span>'s 300 pages contain more indices (for example, of character specifications) and more complex instructions for categorizing and compiling conflicts, which are not implemented here.</span></div>
+        <div class="col-md-12 justify small-text">The Plotto Masterplot generator implemented here is a simplified version which follows only the instruction Clause A + Clause B + Clause C, where there are 15 possible Clause As, 62 possible Clause Bs, and 15 possible Clause Cs. <span class="italics">Plotto</span>'s 300 pages contain more indices (for example, of character specifications) and more complex instructions for categorizing and compiling conflicts, which are not implemented here.</span></div>
       </div>
       <div class="row">
-        <div class="col-md-6 right small-text">Extraordinarily prolific dime novelist and pulp magazine writer who occassionally wrote under the pen-name John Milton Edwards, including <span class="italics">The Fiction Factory: Being the Experience of a Writer Who, for Twenty-Two Years, Has Kept a Story-Mill Grinding Successfully</span> (1912) in which he describes his method to writing 66,000 words per week, an exceptional pace which he sustained for some years.</div>
-        <div class="col-md-6 left" style="padding-left: 75px;">William Wallace Cook (1867-1933)</div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 left">
-          “The Conflicts all come from the vast storehouse of Human Nature. They are there, millions upon millions of them, waiting for the imagination to select them and group them in an original combination.”
-          <p>The Plotto's forefather: <span class="italics">Ars brevis</span> (1308)</p>
+        <div class="col-md-6 right small-text" style="display: flex; align-items: center;">
+          <div>Extraordinarily prolific dime novelist and pulp magazine writer who occassionally wrote under the pen-name John Milton Edwards, including <span class="italics">The Fiction Factory: Being the Experience of a Writer Who, for Twenty-Two Years, Has Kept a Story-Mill Grinding Successfully</span> (1912)<sup>5</sup> in which he describes his method to writing <span class="medium-text">66,000</span> words per week, an exceptional pace which he sustained for some years.</div>
         </div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6 left" style="padding-left: 75px;">William Wallace Cook (1867-1933)
+          <img src="https://m.media-amazon.com/images/I/51Q3deJXmNL.jpg" alt="Book cover of Cook's book The Ficton Factory" style="width: 50%; margin-top: 10px; margin-left: 25px">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 justify" style="display: flex; align-items: center;">
+          <div>
+          “The Conflicts all come from the vast storehouse of Human Nature. They are there, millions upon millions of them, waiting for the imagination to select them and group them in an original <span class="medium-text">combination</span>.”
+          </div>
+          <img src="{{ url_for('static', filename = 'llull.png') }}" alt="Screenshot of Figure I in Llull's Ars brevis" style="width: 50%; margin-left: 25px;">
+        </div>
+        <div class="col-md-6" style="padding-right: 75px;">The Plotto's forefather: <span class="italics">Ars brevis</span> (1308)<br />
+          <p class="small-text justify">
+            
+            In his own Art, Cook inherits a Llullian language, as do many of the writers on formal literary methods in the seventeenth through nineteenth centuries. Although the earliest mathematical and logical thought experiments related to combinatorics can be traced to long before Llull, Llull is still ahead of the formalization of combinatorics theory in the Renaissance. While <span class="italics">Plotto</span> lacks the diagrams of spinning wheels and there is no record that Cook envisioned a machine any more complex than one's own ability to choose random numbers which could be looked up in an index, Cook's language of combination and transcendentals like Human Nature certainly recall Llull's own spiritual fervor to achieve his <span class="italics">Ars brevis</span> and other works.
+
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">Cook glances back in history past over six hundred years to land on Llull’s Ars Brevis (1308), past the perennially resurfacing conflict: intelligible versus unintelligible reality - what can be taught and apprehended versus what cannot be - knowledge versus imagination - technique versus talent - discipline versus creativity. Interestingly, Cook himself does not oppose combinatorics and imagination - instead, he rearranges the equation altogether, to suggest that intellect is equal to combination plus imagination, intellect = combination + imagination: “The Conflicts all come from the vast storehouse of Human Nature. They are there, millions upon millions of them, waiting for the imagination to select them and group them in an original combination.”</div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 citations left small-text">
+          <p>1. Collins, Paul. (2012). Foreword to Plotto. Portland: Tin House Publishing. Retrieved <a href="https://tinhouse.com/plotto-foreward-by-paul-collins">here</a>.</p>
+          <p>2. Frederick, J. George (Justus George)., Brill, A. A. (Abraham Arden). (1933). The psychology of writing success. New York: The Business Bourse, 293. Retrieved <a href="https://catalog.hathitrust.org/Record/001437985">here</a>.</p>
+          <p>3. Hersey, H. Brainerd. (1937). Pulpwood editor: the fabulous world of the thriller magazines revealed by a veteran editor and publisher. New York: Frederick A. Stokes company, 125. Retrieved <a href="https://catalog.hathitrust.org/Record/001013119">here</a>.</p>
+          <p>4. Cook, William Wallace. (1928). Plotto: A new method of plot suggestion for writers of creative fiction. Battle Creek: Ellis Publishing Company, 11.</p>
+          <p>5. Image obtained from <a href="https://www.amazon.com/Fiction-Factory-Experience-Twenty-Two-Successfully-ebook/dp/B00BBKVKAW/ref=sr_1_2?dchild=1&keywords=fiction+factory&qid=1589524689&sr=8-2">Amazon</a>.
+        </div>
       </div>
 	</div>
 	{% endblock %}
