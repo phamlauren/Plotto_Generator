@@ -402,6 +402,10 @@ def random_generate():
 def history():
     return render_template("history.html")
 
+@app.route('/question')
+def question():
+    return render_template("question.html")
+
 @app.route('/about')
 def about():
     return render_template("about.html")

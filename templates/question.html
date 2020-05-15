@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% extends "navbar.html" %}
+	{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'typewriter.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename = 'question.js') }}"></script>
+
+  <style>
+   	body{
+   		font-family: Baskerville;
+   		font-size: 24px;
+      background-color: black;
+      color: white;
+   	}
+
+    .container {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+    } 
+
+    .italics {
+      font-style: italic;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .small-text {
+      font-size: 18px;
+    }
+
+    .hide-media {
+      display: none;
+    }
+
+    #citation {
+      color: #333333;
+      margin-top: 20px;
+    }
+
+  </style>
+  {% endblock %}
+
+</head>
+
+<body>
+	{% block content %}
+	<div class="container">
+    <div class="row">
+      <div class="col-md-12 left typewriter">
+        <h1 class="type" id="intro">The question is</h1>
+        <h1 class="type hide-media" id="question" style="margin-bottom: 50px;">Software does a screenwriter make?</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 left" id="story">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 left hide-media" id="citation">Text from Rothstein, E. (1991, Sep 22). FILM; hard up for a plot? get with the program. New York Times, H13. Retrieved from <a href="http://ezproxy.cul.columbia.edu/login?url=https://search-proquest-com.ezproxy.cul.columbia.edu/docview/428191644?accountid=10226">Columbia Library/ProQuest</a></div>
+    </div>
+	</div>
+	{% endblock %}
+</body>
+</html>
