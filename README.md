@@ -4,7 +4,7 @@ This project is for CLEN-GU4728: Literature in the Age of Artificial Intelligenc
 
 The Flask app is hosted on PythonAnywhere - [Click here!](http://laurenpham.pythonanywhere.com/home)
 
-If you really want to, you could also run the app on your local machine, download the repository. On the command line in the Plotto_Generator directory, execute the commands:
+If you really want to, you could also run the app on your local machine. Download the repository. On the command line in the Plotto_Generator directory, execute the commands:
 
 $ source venv/bin/activate
 $ python3 server.py
